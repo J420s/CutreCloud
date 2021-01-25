@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    
     <script src="./jqfloat.min.js"></script>
+    <script language="javascript" src="javascripts/jquery.vibrate.min.js"></script>
+    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,28 +25,37 @@
     .container-fluid{
         height: 750px;
     }
+
+    table {
+        background-image: linear-gradient(to bottom, red 0%, blue 100%); /* the gradient */
+        background-origin: border-box; /* set background to start from border-box */
+        border-spacing: 5px; /* space between each cell */
+        border: 5px solid transparent; /* optional */
+    }
   </style>
   <body>
       
     <div class="container-fluid bg-hex">
-    <div class="row" style="height:50px"></div>
-        <div class="row">
-            <div class="col">
-                <img src="./hexagono.png" class="img-fluid" id="hex">
+    <div class="row" style="height:200px"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <img src="./hex-img.png" class="img-fluid" id="hex">
             </div>
-            <div class="col">
-                <img src="./hexagono.png" class="img-fluid" id="hex">
+            <div class="col-md-3 offset-1">
+                <img src="./hex-audio.png" class="img-fluid" id="hex">
             </div>
-            <div class="col">
-                <img src="./hexagono.png" class="img-fluid" id="hex">
+            <div class="col-md-3 offset-1">
+                <a href="table.php">
+                    <img src="./hex-video.png" class="img-fluid" id="hex">
+                </a>
+                
             </div>
         </div>
     </div>
+    
+   
     <script>
-        $(document).ready(function() {
-            $('.img-fluid').jqFloat();
-            $('.img-fluid').draggable();
-        });
+        $(document).ready(function() {$('.img-fluid').jqFloat()})
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
