@@ -22,35 +22,82 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    .bg-dark-blue{
+        background-color: #00003E;
+    }
     .container-fluid{
         
     }
 
     
+  
   </style>
   <body>
       
-    <div class="container-fluid bg-dark p-5">
-        <div class="row" style="height:50px">
+    <div class="container-fluid bg-dark p-3">
+        <div class="row pb-4" style="">
+            <div class="col">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+                        <a class="navbar-brand" href="index.php">BlingBlog</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="list.php">Posts <span class="sr-only">(current)</span></a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">#</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">#</a>
+                                </li>
+                            </ul>
+                            <form action="tools/login.php" method="POST" class="form-inline row justify-content-center">
+                                <div class="col-md-4  offset-2">
+                                    <div class="input-group">
+                                        <input type="username" class="form-control" name="username" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" name="password" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-2 bg-dark">
-            <div class="card">
-                            <img class="card-img-top" src="holder.js/100x180/" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Title</h4>
-                                <p class="card-text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia consequatur dolore nisi corrupti, distinctio quis voluptatem nam aut non ipsum magni dignissimos ex veritatis? Maxime facilis recusandae enim vel hic.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nemo ex, cupiditate fuga dolores asperiores fugiat quas iste temporibus et expedita laborum, nam omnis aliquid, corporis id minus alias repudiandae.
-               Lorem ipsum
-                                </p>
-                            </div>
-                        </div>
+                <!-------->
+                <div class="card">
+                    <img class="card-img-top" src="./default-profile.jpg" alt="">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">User name</h4>
+                        <small> Last login on: </small>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">Dashboard</li>
+                    <li class="list-group-item">Images</li>
+                    <li class="list-group-item">Music</li>
+                    <li class="list-group-item">Video</li>
+                    <li class="list-group-item">Configuration</li>
+                </ul>
+                <!-------->
             </div>
             <div class="col">
                 <div class="row pb-4">
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card bg-dark-blue">
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
@@ -77,6 +124,26 @@
                         </div>
                     </div>
                     <div class="col-md-2">
+                        <div class="card">
+                            <img class="card-img-top" src="holder.js/100x180/" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="holder.js/100x180/" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
                         <div class="card">
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body">
@@ -87,33 +154,34 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img class="card-img-top" src="holder.js/100x180/" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Title</h4>
-                                <p class="card-text">Text</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img class="card-img-top" src="holder.js/100x180/" alt="">
-                            <div class="card-body">
-                                <h4 class="card-title">Title</h4>
-                                <p class="card-text">Text</p>
-                            </div>
-                        </div>
+                    <div class="col">
+                        <table class="table bg-white rounded">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Ultima modificación</th>
+                                    <th>Tamaño</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-   
-    <script>
-        $(document).ready(function() {$('.img-fluid').jqFloat()})
-    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
