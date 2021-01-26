@@ -23,6 +23,10 @@
         background-size: cover;
     }
 
+    .color-white {
+        color: white;
+    }
+
     .bg-dark-blue{
         background-color: #00003E;
     }
@@ -97,7 +101,7 @@
             <div class="col">
                 <div class="row pb-4">
                     <div class="col-md-4">
-                        <div class="card bg-dark-blue">
+                        <div class="card bg-dark-blue color-white">
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
@@ -106,7 +110,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card bg-dark-blue color-white">
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
@@ -115,7 +119,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="card">
+                        <div class="card bg-dark-blue color-white">
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
@@ -124,7 +128,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="card">
+                        <div class="card bg-dark-blue color-white">
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
@@ -135,7 +139,7 @@
                 </div>
                 <div class="row pb-4">
                     <div class="col-md-6">
-                        <div class="card">
+                        <div class="card bg-dark-blue color-white">
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
@@ -144,7 +148,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="card">
+                        <div class="card bg-dark-blue color-white">
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body">
                                 <h4 class="card-title">Title</h4>
