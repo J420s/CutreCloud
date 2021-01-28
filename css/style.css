@@ -1,0 +1,39 @@
+
+    .bg-dark-blue{
+        background-color:rgba(10,17,50,1);
+    }
+
+    .bg-gradient{
+        background: rgb(2,0,36);
+        background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(10,17,50,1) 14%, rgba(10,24,57,1) 37%, rgba(10,34,70,1) 52%, rgba(11,47,87,1) 69%, rgba(11,59,104,1) 82%, rgba(12,82,134,1) 100%);
+    }
+    .gradient-b-white{
+        background: rgb(66,11,107);
+        background: linear-gradient(180deg, rgba(66,11,107,0.8) 0%, rgba(66,11,102,0.8) 15%, rgba(61,3,3,0.8) 100%);
+    }
+
+    .gradient-green{
+        background: rgb(11,107,79);
+        background: linear-gradient(180deg, rgba(11,107,79,1) 0%, rgba(22,149,88,1) 47%, rgba(45,173,112,1) 94%, rgba(40,181,114,1) 100%);
+    }
+
+    .b-white{
+        background-color:rgba(255,255,255,0.8)
+    }
+
+    .container-fluid{
+        height: 880px;
+        
+    }
+    .profile-img {
+        height:100px;
+        width:100px;
+        border-radius: 50%;
+    }
+    
+    .preview-img{
+        height:100px;
+        width:100px;
+        border-radius: 50%;
+    }
+  

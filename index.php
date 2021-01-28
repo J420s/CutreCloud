@@ -1,3 +1,5 @@
+<?php include "./lib/Loader.php" ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,57 +8,145 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-    
-    <script src="./jqfloat.min.js"></script>
-    <script language="javascript" src="javascripts/jquery.vibrate.min.js"></script>
-    
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
-  <style>
-    .bg-hex{
-        background-image: url("./bg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .container-fluid{
-        height: 750px;
-    }
 
-    table {
-        background-image: linear-gradient(to bottom, red 0%, blue 100%); /* the gradient */
-        background-origin: border-box; /* set background to start from border-box */
-        border-spacing: 5px; /* space between each cell */
-        border: 5px solid transparent; /* optional */
-    }
-  </style>
   <body>
       
-    <div class="container-fluid bg-hex">
-    <div class="row" style="height:200px"></div>
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <img src="./hex-img.png" class="img-fluid" id="hex">
-            </div>
-            <div class="col-md-3 offset-1">
-                <img src="./hex-audio.png" class="img-fluid" id="hex">
-            </div>
-            <div class="col-md-3 offset-1">
-                <a href="table.php">
-                    <img src="./hex-video.png" class="img-fluid" id="hex">
-                </a>
-                
+    <div class="container-fluid gradient-green p-3">
+        <!------------ Navbar --------------->
+        <div class="row pb-4" style=""> 
+            <div class="col">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-dark-blue rounded">
+                        <a class="navbar-brand" href="index.php"><h5 class=" ">Squirrel Cloud</h5></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto ">
+                                <li class="nav-item active ">
+                                    <a class="nav-link " href="list.php">Posts <span class="sr-only">(current)</span></a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">#</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">#</a>
+                                </li>
+                            </ul>
+                            <form action="tools/login.php" method="POST" class="form-inline row justify-content-center">
+                                <div class="col-md-4  offset-2">
+                                    <div class="input-group">
+                                        <input type="username" class="form-control" name="username" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" name="password" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
             </div>
         </div>
+        <!------------ /Navbar --------------->
+        
+        <!------------ Content --------------->
+        <div class="row">
+            <!------------ Right panel --------------->
+            <div class="col-md-2">
+                <!-------->
+                <div class="card b-white pt-3">
+                    
+                            <img class="card-img-top profile-img mx-auto"  src="./img/default-profile.jpg" alt="">
+                    
+                    <div class="card-body text-center">
+                        <h4 class="card-title">User name</h4>
+                        <small> Last login on: </small>
+                    </div>
+                </div>
+                <ul class="list-group  ">
+                    <li class="list-group-item b-white">Dashboard</li>
+                    <li class="list-group-item b-white">Images</li>
+                    <li class="list-group-item b-white">Music</li>
+                    <li class="list-group-item b-white">Video</li>
+                    <li class="list-group-item b-white">Configuration</li>
+                </ul>
+                <!-------->
+            </div>
+            <!------------ /Right panel --------------->
+
+            <!------------ Files --------------->
+            <div class="col">
+                <?php new Loader("Images")?>
+                <div class="row justify-content-center pb-4">
+                    <div class="col">
+                        <div class="card b-white  ">
+                            <img class="card-img-top" src="holder.js/100x180/" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card b-white  ">
+                            <img class="card-img-top" src="holder.js/100x180/" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card b-white  ">
+                            <img class="card-img-top" src="holder.js/100x180/" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card b-white  ">
+                            <img class="card-img-top" src="holder.js/100x180/" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card b-white  ">
+                            <img class="card-img-top" src="holder.js/100x180/" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Title</h4>
+                                <p class="card-text">Text</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-outline-primary btn-lg">
+                            <i class="fa fa-plus" style="color:black"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!------------ /Files --------------->
+        </div>
+        <!------------ /Content --------------->
     </div>
     
-   
-    <script>
-        $(document).ready(function() {$('.img-fluid').jqFloat()})
-    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
