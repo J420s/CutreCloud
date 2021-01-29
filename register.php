@@ -1,5 +1,3 @@
-<?php include "./lib/Loader.php" ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
   </head>
 
@@ -53,7 +52,7 @@
                                     <button class="btn btn-outline-primary btn-sm my-2 my-sm-0" type="submit">Login</button>
                                 </div>
                                 <div class="col-md-2">
-                                    <a href="register.php" class="btn btn-outline-success btn-sm my-2 my-sm-0">Register</a>
+                                    <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="submit">Register</button>
                                 </div>
                                 
                             </form>
@@ -63,46 +62,33 @@
         </div>
         <!------------ /Navbar --------------->
         
-        <!------------ Content --------------->
-        <div class="row">
-            <!------------ Right panel --------------->
-            <div class="col-md-2">
-                <!-------->
-                <div class="card b-white pt-3">
-                    
-                            <img class="card-img-top profile-img mx-auto"  src="./img/default-profile.jpg" alt="">
-                    
-                    <div class="card-body text-center">
-                        <h4 class="card-title">User name</h4>
-                        <small> Last login on: </small>
+        <div class="row justify-content-center">
+            
+                <form action="" class="col-md-4 myform bg-dark">
+                    <div class="form-group bg-warning">
+                      <label>User name:</label>
+                      <input type="text" class="form-control w-50" name="" id="" placeholder="Macarrones007">
+                      <small id="helpId" class="form-text text-muted">Help text</small>
                     </div>
-                </div>
-                <ul class="list-group  ">
-                    <li class="list-group-item b-white">Dashboard</li>
-                    <li class="list-group-item b-white">Images</li>
-                    <li class="list-group-item b-white">Music</li>
-                    <li class="list-group-item b-white">Video</li>
-                    <li class="list-group-item b-white">Configuration</li>
-                </ul>
-                <!-------->
-            </div>
-            <!------------ /Right panel --------------->
-
-            <!------------ Files --------------->
-            <div class="col">
-                <?php new Loader("Images")?>
-                
-                <div class="row justify-content-center">
-                    <div class="col-md-1">
-                        <button type="button" class="btn btn-outline-primary btn-lg">
-                            <i class="fa fa-plus" style="color:black"></i>
-                        </button>
+                    <div class="form-group">
+                      <label>Email:</label>
+                      <input type="text" class="form-control w-50" name="" id="" placeholder="Example@email.com">
+                      <small id="helpId" class="form-text text-muted">Help text</small>
                     </div>
-                </div>
-            </div>
-            <!------------ /Files --------------->
+                    <div class="form-group">
+                      <label>Password:</label>
+                      <input type="text" class="form-control w-50" name="" id="" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+                    <div class="form-group">
+                      <label>Re-type password:</label>
+                      <input type="text" class="form-control w-50" name="" id="" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+                </form>
+            
         </div>
-        <!------------ /Content --------------->
+      
     </div>
     
     <!-- Optional JavaScript -->

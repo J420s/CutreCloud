@@ -21,6 +21,10 @@
         background-color:rgba(255,255,255,0.8)
     }
 
+    .f-white{
+        color:rgba(255,255,255,0.8)
+    }
+
     .container-fluid{
         height: 880px;
         
@@ -31,9 +35,7 @@
         border-radius: 50%;
     }
     
-    .preview-img{
-        height:100px;
-        width:100px;
-        border-radius: 50%;
+    .myform{
+        border-radius:10px;
+        color:rgba(255,255,255,0.8);
     }
-  
