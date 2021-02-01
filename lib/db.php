@@ -2,7 +2,7 @@
 
 function mysql_ask($query){
     
-    $connection = mysqli_connect("127.0.0.1","phpmyadmin","hola01","Agenda");
+    $connection = mysqli_connect("127.0.0.1","cloud01","hola01","Cloud");
 
     $result = $connection -> connect_error ? $connection -> connect_error : $connection -> query($query);
 
@@ -10,13 +10,8 @@ function mysql_ask($query){
     return $result;
 }
 
-function addUser(){
-    $query = "INSERT INTO Usuario ()";
-    
-}
-
-function addRow($fields){
-    $query = "INSERT INTO contactes ";
+function addUser($fields){
+    $query = "INSERT INTO Usuario";
     $columns = "(";
     $values = "VALUES (";
     foreach ($fields as $key => $val) {
@@ -28,6 +23,7 @@ function addRow($fields){
     $columns = substr($columns, 0, -1) . ")";
     $values = substr($values, 0, -1) . ")";
     return mysql_ask($query . $columns . $values);
+    
 }
 
 
