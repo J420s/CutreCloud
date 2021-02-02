@@ -19,7 +19,8 @@
 
 <body>
 
-  <div class="gradient-green" id="bg">
+  
+  <div class="gradient-green-fixed" id="bg">
     <!------------ Navbar --------------->
     <div class="row ">
       <div class="col">

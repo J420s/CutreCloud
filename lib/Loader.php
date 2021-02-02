@@ -21,18 +21,18 @@ class Loader{
         echo call_user_func(array($this, 'print' . $section),);
     }
 
-    private function printImages(){
-        $directorio = App::$imageFolder;
-        $ficheros = array_diff(scandir($directorio), array('..', '.'));
+    public function printImages(){
+
+        $allImages = Database::getAllImages($this -> userID);
 
         $cont = 0;
         $result = "";
 
-        foreach ($ficheros as $fichero) {
-
+        while($img = $allImages->fetch_assoc()) {
+            
             if($cont == 0) $result .= "<div class='row justify-content-center pb-4'>";
 
-            $img = new Image($directorio.'/'.$fichero);
+            $image = new Image($img['nombre'],$img['contenido']);
 
             ob_start();
             include "./components/card-img.php";
@@ -40,9 +40,15 @@ class Loader{
 
             $cont ++;
 
-            if($cont == 5) $result .= "</div>";
+            if($cont == 5) {
+                $result .= "</div>";
+                $cont = 0;
+            }
         }
-
+        if($cont > 0) $result .= "</div>";
+        
+        
+        
        return $result;
     }
 

@@ -81,7 +81,7 @@ $_SESSION['id'] = $load -> userID;
             <!------------ Files --------------->
             <div class="col">
 
-
+                <?= $load -> printImages()?>
                 <div class="row justify-content-center">
                     <div class="col-md-1">
                         <button id="btn-upload" type="button" class="btn btn-outline-primary btn-lg">

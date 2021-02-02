@@ -2,18 +2,25 @@
 
 //https://stackoverflow.com/questions/6087569/php-imagemagick-image-display
 
-class Image{
-    private $source;
+//<img src="data:image/jpeg;base64,' . $result['image'] . '"/>
 
-    public function __construct($source){
-        $this->source = $source;
+class Image{
+
+    private $name = "String";
+    private $source = "String";
+
+    public function __construct($name,$source){
+        $this -> name = $name;
+        $this -> source = $source;
     }
 
-    public function getSource(){
+    public function getName(){
         return $this->source;
     }   
 
     public function getHTML(){
-        return '<img src="' . $this->getSource(). '" width="33%" class="card-img-top preview-img">';
+        
+        return '<img src="data:image/jpeg;base64,' . $this -> source . '" width="33%" class="card-img-top preview-img">';
+        
     }
 }

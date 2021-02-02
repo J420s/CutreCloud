@@ -15,6 +15,16 @@ class Database{
         return self::query($query . $columns . $values);
     }
 
+    public static function getAllImages($user_ID){
+        
+        $query = "SELECT nombre,contenido
+                FROM Media
+                WHERE usuario_id = '$user_ID' 
+                AND tipo = 'image/jpeg'";
+
+        return self::query($query);
+    }
+
     public static function getUserID($email){
 
         return self::get_single_field('Usuario','id','email',$email);
