@@ -20,39 +20,25 @@
       
     <div class="gradient-green" id="bg">
         <!------------ Navbar --------------->
-        <div class="row " style=""> 
+        <div class="row "> 
             <div class="col">
                     <nav class="navbar navbar-expand-lg bg-dark-blue rounded" >
                         
                         <a class="navbar-brand" href="index.php"><h5 class=" ">Squirrel Cloud</h5></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active ">
-                                    <a class="nav-link " href="list.php">Posts <span class="sr-only">(current)</span></a>
-                                </li>
-                                
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">#</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">#</a>
-                                </li>
-                            </ul>
-
-                            <div class="nav-item dropdown login-dropdown">
+                        
+                            
+                            
+                            <div class=" dropdown login-dropdown ml-auto">
                                 <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle"><i class="fa fa-user-o"></i> Login</a>
                                 <div class="dropdown-menu dropdown-menu-right login">	
                                     
-                                        <form action="tools/login.php" method="post" class="row justify-content-center">
+                                        <form action="./lib/controller.php" method="POST" class="row justify-content-center">
                                             <div class="col-md-4 p-1">
                                                 <div class="form-group form-inline m-0">
                                                     <span class="input-group-text">
                                                         <span class="fa fa-user"></span>
                                                     </span>                    
-                                                    <input type="text" class="form-control w-75" placeholder="Username" required>
+                                                    <input name="email" type="email" class="form-control w-75" placeholder="Email" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 p-1">
@@ -60,7 +46,7 @@
                                                     <span class="input-group-text ">
                                                         <i class="fa fa-lock"></i>
                                                     </span>                    
-                                                    <input type="text" class="form-control w-75" placeholder="Password" required>
+                                                    <input name="password" type="password" class="form-control w-75" placeholder="Password" required>
                                                 </div>
                                                 
                                             </div>
@@ -71,11 +57,11 @@
                                     
                                 </div>
                             </div>
-                            <div class="nav-item">
-                                <button id="btn-register" class="btn btn-outline-success btn-sm mx-auto" type="button">Register</button>
-                            </div>
+                            
+                            <button id="btn-register" class="btn btn-outline-success btn-sm ml-auto" type="button">Register</button>
+                            
 			
-                        </div> 
+                        
                     </nav>
             </div>
         </div>
@@ -87,11 +73,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid to-front pt-5">
+    <div class="container-fluid container-custom to-front pt-5">
         
         <div class="row justify-content-center pt-5" style="height:75vh;">
             
-                <form action="registrar.php" class="col-md-3 round-10 f-white bg-dark align-self-center p-2" style="opacity: 0.8;">
+                <form action="./lib/controller.php" method="POST" class="col-md-3 round-10 f-white bg-dark align-self-center p-2" style="opacity: 0.8;">
                     <div class="row form-group justify-content-center">
                       <div class="col-md-10">
                         <label>User name:</label>
@@ -116,7 +102,7 @@
                     <div class="row form-group justify-content-center ">
                       <div class="col-md-10">
                         <label>Re-type password:</label>
-                        <input type="text" class="form-control" name="" id="password2" placeholder="Macarrones007">
+                        <input type="text" class="form-control" name="password2" placeholder="Macarrones007">
                         <small id="helpId" class="form-text text-muted">Help text</small>
                       </div>
                     </div>

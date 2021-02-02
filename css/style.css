@@ -22,7 +22,7 @@
         -webkit-filter: blur(8px);
     }
 
-    .container-fluid{
+    .container-custom{
         
         position: fixed;
         left: 0;
