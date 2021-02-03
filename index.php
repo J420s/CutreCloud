@@ -18,13 +18,12 @@
 </head>
 
 <body>
-
   
   <div class="gradient-green-fixed" id="bg">
     <!------------ Navbar --------------->
     <div class="row ">
       <div class="col">
-        <nav class="navbar navbar-expand-lg bg-dark-blue">
+        <nav class="navbar navbar-expand-lg">
 
           <a class="navbar-brand" href="index.php">
             <img src="./img/cutrcloud-logo2.svg" class="img-fluid"style="width:200px;">

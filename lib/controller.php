@@ -12,7 +12,6 @@ if(isset($_REQUEST['username'])){
         ));
     
     if($success)header('Location: ../index.php');
-    else{echo $success;}
 
 }else{
 

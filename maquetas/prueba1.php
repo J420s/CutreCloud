@@ -55,7 +55,7 @@ $_SESSION['id'] = $load -> userID;
 
         <!------------ Content --------------->
         <div class="row p-4">
-            <!------------ Right panel --------------->
+            <!------------ Left panel --------------->
             <div class="col-md-2">
                 <!-------->
                 <div class="card b-white pt-3 bg-dark border border-primary f-white" style="opacity:0.8;">
@@ -76,7 +76,7 @@ $_SESSION['id'] = $load -> userID;
                 </ul>
                 <!-------->
             </div>
-            <!------------ /Right panel --------------->
+            <!------------ /Left panel --------------->
 
             <!------------ Files --------------->
             <div class="col">
