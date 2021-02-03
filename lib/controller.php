@@ -11,7 +11,8 @@ if(isset($_REQUEST['username'])){
         'username'  =>  $_REQUEST['username']
         ));
     
-    if($success)header('Location: index.php');
+    if($success)header('Location: ../index.php');
+    else{echo $success;}
 
 }else{
 
@@ -25,7 +26,7 @@ if(isset($_REQUEST['username'])){
 
         }else{
 
-            header('Location: index.php');
+            header('Location: ../index.php');
 
         }
     }
