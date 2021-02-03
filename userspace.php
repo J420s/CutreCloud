@@ -39,7 +39,7 @@ $_SESSION['id'] = $load -> userID;
                 <nav class="navbar navbar-expand-lg bg-dark-blue">
 
                     <a class="navbar-brand" href="index.php">
-                        <h5 class=" ">Squirrel Cloud</h5>
+                        <img src="./img/cutrcloud-logo2.svg" class="img-fluid"style="width:200px;">
                     </a>
                     <div class=" dropdown login-dropdown ml-auto">
                         <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle"><i class="fa fa-user-o p-1"></i><?= $load -> username?></a>

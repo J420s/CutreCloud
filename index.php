@@ -27,11 +27,11 @@
         <nav class="navbar navbar-expand-lg bg-dark-blue">
 
           <a class="navbar-brand" href="index.php">
-            <h5 class=" ">Squirrel Cloud</h5>
+            <img src="./img/cutrcloud-logo2.svg" class="img-fluid"style="width:200px;">
           </a>
 
           <div class=" dropdown login-dropdown ml-auto">
-            <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle"><i class="fa fa-user-o"></i> Login</a>
+            <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle" style="color:white"><i class="fa fa-user-o" style="color:white"></i> Login</a>
             <div class="dropdown-menu dropdown-menu-right login">
 
               <form action="./lib/controller.php" method="POST" class="row justify-content-center">
@@ -71,7 +71,7 @@
 
     <div class="row justify-content-center pt-5">
       <div class="col-md-3 align-self-center text-center pt-5">
-        <img src="./img/squirrel.svg" class="img-fluid" alt="" />
+        <img src="./img/cutrcloud-logo.svg" class="img-fluid"" />
       </div>
     </div>
   </div>
