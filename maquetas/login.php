@@ -30,94 +30,61 @@
 <body>
 
     <div class="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
-                <li class="active">
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
         <div id="content" class="w-100">
 
             <div class="container-fluid ">
                 <div class="row">
                     <div class="col p-0 ">
-                        <nav class="navbar navbar-expand-lg navbar-light border border-primary">
-                            <button type="button" id="sidebarCollapse" class="btn btn-info">
-                                <i class="fas fa-align-left"></i>
-                                <span>Toggle Sidebar</span>
-                            </button>
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <img src="../img/cutrcloud-logo2.svg" class="img-fluid"style="width:200px;">
                         </nav>
                     </div>
                 </div>
+                <div class="row justify-content-center">
+                    
+                    <form action="./lib/controller.php" method="POST" class="col-md-3 round-10 align-self-center p-2" id="myform" style="opacity: 0.8;">
+                            <div class="row form-group justify-content-center">
+                            <div class="col-md-10">
+                                <label>User name:</label>
+                                <input type="text" class="form-control" name="username" id="" placeholder="Macarrones007">
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                            </div>
+                            <div class="row form-group justify-content-center ">
+                            <div class="col-md-10">
+                                <label>Email:</label>
+                                <input type="text" class="form-control" name="email" id="" placeholder="Macarrones007">
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                            </div>
+                            <div class="row form-group justify-content-center ">
+                            <div class="col-md-10">
+                                <label>Password:</label>
+                                <input type="password" class="form-control" name="password" id="" placeholder="Macarrones007">
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                            </div>
+                            <div class="row form-group justify-content-center ">
+                            <div class="col-md-10">
+                                <label>Re-type password:</label>
+                                <input type="text" class="form-control" name="password2" placeholder="Macarrones007">
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                            </div>
+                            <div class="row form-group justify-content-center ">
+                            <div class="col text-center">
+                                <a name="" id="btn-form-login" class="btn btn-outline-primary" href="#" role="button">Login</a>
+                            </div>
+                            <div class="col text-center">
+                                <button type="submit" class="btn btn-success"> Register </button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                
             </div>
             
-<div class="lightbox-gallery">
-    <div class="container">
-        <div class="intro">
-            <h2 class="text-center">Lightbox Gallery</h2>
-            <p class="text-center">Find the lightbox gallery for your project. click on any image to open gallary</p>
-        </div>
-        <div class="row photos">
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg" data-lightbox="photos"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg"></a></div>
-        </div>
-    </div>
-</div>
+
 
         </div>
     </div>

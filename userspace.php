@@ -70,7 +70,7 @@ $_SESSION['id'] = $load -> userID;
                 <ul class="list-group border border-primary mt-1 rounded f-white" style="opacity:0.8;">
                     <li class="list-group-item bg-dark">Dashboard</li>
                     <li class="list-group-item bg-dark">Images</li>
-                    <li class="list-group-item bg-dark">Music</li>
+                    <li class="list-group-item bg-dark"><a href="userspace.php?section=Audio">Music</a></li>
                     <li class="list-group-item bg-dark">Video</li>
                     <li class="list-group-item bg-dark">Configuration</li>
                 </ul>
@@ -81,7 +81,14 @@ $_SESSION['id'] = $load -> userID;
             <!------------ Files --------------->
             <div class="col">
 
-                <?= $load -> printImages()?>
+                <?php
+
+                    if(isset($_REQUEST['section'])){
+                       echo $load -> printSection($_REQUEST['section']);
+                    }else{
+                       echo $load -> printSection('Images');
+                    }
+                ?>
                 <div class="row justify-content-center">
                     <div class="col-md-1">
                         <button id="btn-upload" type="button" class="btn btn-outline-primary btn-lg">

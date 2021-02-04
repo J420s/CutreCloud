@@ -15,6 +15,15 @@ class Database{
         return self::query($query . $columns . $values);
     }
 
+    public static function getAllAudio($user_ID){
+        $query = "SELECT nombre,contenido
+                FROM Media
+                WHERE usuario_id = '$user_ID' 
+                AND tipo = 'audio/mpeg'";
+
+        return self::query($query);
+    }
+
     public static function getAllImages($user_ID){
         
         $query = "SELECT nombre,contenido
@@ -43,7 +52,7 @@ class Database{
                             FROM Usuario 
                             WHERE email='$email'") -> fetch_assoc()['password'];
 
-        return $password === $pass ? true : false;
+        return md5($password) === $pass ? true : false;
     }
 
     public static function addNewUser($fields){

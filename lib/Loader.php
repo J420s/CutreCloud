@@ -1,6 +1,7 @@
 <?php
 
 require_once "./lib/App.php";
+require_once "./lib/Audio.php";
 require_once "./lib/Image.php";
 require_once "./lib/Database.php";
 
@@ -21,6 +22,32 @@ class Loader{
         echo call_user_func(array($this, 'print' . $section),);
     }
 
+    public function printAudio(){
+        $allAudio = Database::getAllAudio($this -> userID);
+
+        $cont = 0;
+        $result = "";
+
+        while($music = $allAudio->fetch_assoc()) {
+            
+            if($cont == 0) $result .= "<div class='row justify-content-center pb-4'>";
+
+            $audio = new Audio($music['nombre'],$music['contenido']);
+
+           
+            $result .= $audio -> getHTML();
+
+            $cont ++;
+
+            if($cont == 5) {
+                $result .= "</div>";
+                $cont = 0;
+            }
+        }
+        if($cont > 0) $result .= "</div>";
+        
+       return $result;
+    }
     public function printImages(){
 
         $allImages = Database::getAllImages($this -> userID);

@@ -7,7 +7,7 @@ if(isset($_REQUEST['username'])){
     $success = Database::addNewUser(array(
         
         'email'     =>  $_REQUEST['email'],
-        'password'  =>  $_REQUEST['password'],
+        'password'  =>  md5($_REQUEST['password']),
         'username'  =>  $_REQUEST['username']
         ));
     
