@@ -57,9 +57,11 @@ class Loader{
 
         while($img = $allImages->fetch_assoc()) {
             
-            if($cont == 0) $result .= "<div class='row justify-content-center pb-4'>";
+           
 
             $image = new Image($img['nombre'],$img['contenido']);
+
+            
 
             ob_start();
             include "./components/card-img.php";
@@ -67,12 +69,9 @@ class Loader{
 
             $cont ++;
 
-            if($cont == 5) {
-                $result .= "</div>";
-                $cont = 0;
-            }
+           
         }
-        if($cont > 0) $result .= "</div>";
+        
         
         
         

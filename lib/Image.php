@@ -20,7 +20,11 @@ class Image{
 
     public function getHTML(){
         
-        return '<img src="data:image/jpeg;base64,' . $this -> source . '" width="33%" class="card-img-top preview-img">';
+        
+        return '<div class="col-sm-6 col-md-4 col-lg-3 item">
+        <a href="data:image/jpeg;base64,' . $this -> source . '" data-toggle="lightbox">
+        <img class="img-fluid" src="data:image/jpeg;base64,' . $this -> source . '">
+    </a>';
         
     }
 }

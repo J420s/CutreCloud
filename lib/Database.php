@@ -52,7 +52,7 @@ class Database{
                             FROM Usuario 
                             WHERE email='$email'") -> fetch_assoc()['password'];
 
-        return md5($password) === $pass ? true : false;
+        return md5($password) == $pass ? true : false;
     }
 
     public static function addNewUser($fields){

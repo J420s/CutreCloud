@@ -4,5 +4,6 @@ $(document).ready(function () {
         
         $('#sidebar').toggleClass('showed');
     });
+    
 
 });
