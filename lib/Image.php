@@ -22,9 +22,10 @@ class Image{
         
         
         return '<div class="col-sm-6 col-md-4 col-lg-3 item">
-        <a href="data:image/jpeg;base64,' . $this -> source . '" data-toggle="lightbox">
-        <img class="img-fluid" src="data:image/jpeg;base64,' . $this -> source . '">
-    </a>';
+                    <a href="data:image/jpeg;base64,' . $this -> source . '" data-toggle="lightbox">
+                        <img class="img-fluid" src="data:image/jpeg;base64,' . $this -> source . '">
+                    </a>
+                </div>';
         
     }
 }

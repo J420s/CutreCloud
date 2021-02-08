@@ -243,39 +243,22 @@ $_SESSION['id'] = $load->userID;
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="btn dropdown-toggle  btn-line-round ">Nuevo</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Imagen</a>
-                        </li>
-                    </ul>
+                    <a href="#pageSubmenu" class="btn btn-line-round ">Nuevo</a>
+                    
                 </li>
                 <li>
                     <a href="#">Mi unidad</a>
                 </li>
                 <li class="active">
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Imágenes</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Nueva carpeta</a>
-                        </li>
-                    </ul>
+                    <a href="userspace.php?section=Images">Imágenes</a>
+                    
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Música</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Nueva carpeta</a>
-                        </li>
-                    </ul>
+                    <a href="userspace.php?section=Audio" >Música</a>
+                    
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Videos</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Nueva carpeta</a>
-                        </li>
-                    </ul>
+                    <a href="userspace.php?section=Videos">Videos</a>  
                 </li>
 
 
@@ -300,10 +283,10 @@ $_SESSION['id'] = $load->userID;
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="">
                                     <a class="dropdown-item" href="#">Mi unidad</a>
-                                    <a class="dropdown-item" href="#">Imagenes</a>
+                                    <a class="dropdown-item" href="userspace.php?section=Images">Imagenes</a>
                                     <a class="dropdown-item" href="userspace.php?section=Audio">Música</a>
-                                    <a class="dropdown-item" href="#">Videos</a>
-                                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                    <a class="dropdown-item" href="userspace.php?section=Video">Videos</a>
+                                    <a class="dropdown-item" href="index.php">Cerrar sesión</a>
                                 </div>
                             </div>
                         </nav>
@@ -317,22 +300,13 @@ $_SESSION['id'] = $load->userID;
                         <p class="text-center">Find the lightbox gallery for your project. click on any image to open gallary</p>
                     </div>
                     <div class="row photos">
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190718/gallery/original/03_r_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/original/01_b_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/original/02_o_car.jpg"></a></div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg" data-toggle="lightbox"><img class="img-fluid" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190717/gallery/original/04_g_car.jpg"></a></div>
+                    <?php
+                        if(isset($_REQUEST['section'])){
+                            echo $load -> printSection($_REQUEST['section']);
+                        }else{
+                            echo $load -> printSection('Images');
+                        }
+                    ?>
                     </div>
                 </div>
             </div>

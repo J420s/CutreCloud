@@ -51,29 +51,16 @@ class Loader{
     public function printImages(){
 
         $allImages = Database::getAllImages($this -> userID);
-
-        $cont = 0;
+ 
         $result = "";
 
         while($img = $allImages->fetch_assoc()) {
-            
-           
 
             $image = new Image($img['nombre'],$img['contenido']);
+    
+            $result .= $image -> getHTML();
 
-            
-
-            ob_start();
-            include "./components/card-img.php";
-            $result .= ob_get_clean();
-
-            $cont ++;
-
-           
         }
-        
-        
-        
         
        return $result;
     }
