@@ -2,6 +2,8 @@
 
 require_once "Database.php";
 
+require_once "App.php";
+
 if(isset($_REQUEST['username'])){
 
     $success = Database::addNewUser(array(
@@ -32,7 +34,19 @@ if(isset($_REQUEST['username'])){
 }
 
 if(isset($_FILES['file'])){
+
     session_start();
-    Database::upload($_FILES['file'],$_SESSION['id']);
-    header('Location: ../userspace.php');
+
+    if( $_FILES['file']['type'] == 'audio/ogg' || 'video/mpeg' ||'image/jpeg'){
+
+        Database::upload($_FILES['file'],$_SESSION['id']);
+        header('Location: ../userspace.php');
+
+    }else{
+
+        $_SESSION['error'] = "Tipo de archivo no soportado";
+        header('Location: ../userspace.php');
+
+    }
+    
 }

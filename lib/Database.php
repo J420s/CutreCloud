@@ -1,10 +1,15 @@
 <?php
 
-class Database{
+require_once "App.php";
 
-    public static function upload($file,$user_id){
+class Database
+{
+
+    public static function upload($file, $user_id)
+    {
         $path = $file['tmp_name'];
         $name = $file['name'];
+
         $type = $file['type'];
         $blob = base64_encode(file_get_contents(addslashes($path)));
 
@@ -15,17 +20,19 @@ class Database{
         return self::query($query . $columns . $values);
     }
 
-    public static function getAllAudio($user_ID){
+    public static function getAllAudio($user_ID)
+    {
         $query = "SELECT nombre,contenido
                 FROM Media
                 WHERE usuario_id = '$user_ID' 
-                AND tipo = 'audio/mpeg'";
+                AND tipo = 'audio/ogg'";
 
         return self::query($query);
     }
 
-    public static function getAllImages($user_ID){
-        
+    public static function getAllImages($user_ID)
+    {
+
         $query = "SELECT nombre,contenido
                 FROM Media
                 WHERE usuario_id = '$user_ID' 
@@ -34,28 +41,41 @@ class Database{
         return self::query($query);
     }
 
-    public static function getUserID($email){
+    public static function getAllVideos($user_ID)
+    {
 
-        return self::get_single_field('Usuario','id','email',$email);
-        
+        $query = "SELECT nombre,contenido
+                FROM Media
+                WHERE usuario_id = '$user_ID' 
+                AND tipo = 'video/mpeg'";
+
+        return self::query($query);
     }
 
-    public static function getUsername($id){
+    public static function getUserID($email)
+    {
 
-        return self::get_single_field('Usuario','username','id',$id);
-
+        return self::get_single_field('Usuario', 'id', 'email', $email);
     }
 
-    public static function validateUser($email,$password){
+    public static function getUsername($id)
+    {
+
+        return self::get_single_field('Usuario', 'username', 'id', $id);
+    }
+
+    public static function validateUser($email, $password)
+    {
 
         $pass = self::query("SELECT password 
                             FROM Usuario 
-                            WHERE email='$email'") -> fetch_assoc()['password'];
+                            WHERE email='$email'")->fetch_assoc()['password'];
 
         return md5($password) == $pass ? true : false;
     }
 
-    public static function addNewUser($fields){
+    public static function addNewUser($fields)
+    {
 
         $query = "INSERT INTO Usuario ";
         $columns = "(";
@@ -63,10 +83,10 @@ class Database{
 
         foreach ($fields as $key => $val) {
 
-            if($val) {
+            if ($val) {
 
                 $columns .= $key . ",";
-                $values .= "'".$val."',";
+                $values .= "'" . $val . "',";
             }
         }
 
@@ -76,24 +96,23 @@ class Database{
         return self::query($query . $columns . $values);
     }
 
-    private static function get_single_field($table,$field,$key,$value){
+    private static function get_single_field($table, $field, $key, $value)
+    {
 
         $query = "SELECT $field FROM $table WHERE $key = '$value'";
 
-        return self::query($query) -> fetch_assoc()[$field];
+        return self::query($query)->fetch_assoc()[$field];
     }
 
-    private static function query($query) {
+    private static function query($query)
+    {
 
-        $connection = mysqli_connect("127.0.0.1","cloud01","hola01","Cloud");
-    
-        $result = $connection -> connect_error ? $connection -> connect_error : $connection -> query($query);
-    
-        $connection -> close();
+        $connection = mysqli_connect("127.0.0.1", "cloud01", "hola01", "Cloud");
+
+        $result = $connection->connect_error ? $connection->connect_error : $connection->query($query);
+
+        $connection->close();
 
         return $result;
     }
 }
-
-
-

@@ -220,18 +220,23 @@ $_SESSION['id'] = $load->userID;
     </style>
     <script>
         $(document).ready(function() {
-
             $('#sidebarCollapse').on('click', function(e) {
 
                 $('#sidebar').toggleClass('showed');
             });
-
-
         });
+
         $(document).on("click", '[data-toggle="lightbox"]', function(event) {
             event.preventDefault();
             $(this).ekkoLightbox();
         });
+
+        $(document).ready(() => {
+            $("#btn-upload").on('click', () => {
+                $("#form-sign").toggle()
+                $("#lightbox-row").toggle()
+            })
+        })
     </script>
 
     <div class="wrapper">
@@ -243,22 +248,22 @@ $_SESSION['id'] = $load->userID;
 
             <ul class="list-unstyled components">
                 <li>
-                    <a href="#pageSubmenu" class="btn btn-line-round ">Nuevo</a>
-                    
+                    <button id="btn-upload" href="#" class="btn btn-line-round">Nuevo</button>
+
                 </li>
                 <li>
                     <a href="#">Mi unidad</a>
                 </li>
                 <li class="active">
                     <a href="userspace.php?section=Images">Imágenes</a>
-                    
+
                 </li>
                 <li>
-                    <a href="userspace.php?section=Audio" >Música</a>
-                    
+                    <a href="userspace.php?section=Audio">Música</a>
+
                 </li>
                 <li>
-                    <a href="userspace.php?section=Videos">Videos</a>  
+                    <a href="userspace.php?section=Videos">Videos</a>
                 </li>
 
 
@@ -293,23 +298,62 @@ $_SESSION['id'] = $load->userID;
                     </div>
                 </div>
             </div>
-            <div class="lightbox-gallery">
-                <div class="container">
-                    <div class="intro">
-                        <h2 class="text-center">Lightbox Gallery</h2>
-                        <p class="text-center">Find the lightbox gallery for your project. click on any image to open gallary</p>
-                    </div>
-                    <div class="row photos">
-                    <?php
-                        if(isset($_REQUEST['section'])){
-                            echo $load -> printSection($_REQUEST['section']);
-                        }else{
-                            echo $load -> printSection('Images');
-                        }
-                    ?>
+            <div class="row" id="lightbox-row">
+                <div class="col">
+                    <div class="lightbox-gallery">
+                        <div class="container">
+                            <div class="intro">
+                                <h2 class="text-center">Lightbox Gallery</h2>
+                                <p class="text-center">Find the lightbox gallery for your project. click on any image to open gallary</p>
+                            </div>
+                            <div class="row photos">
+                                <?php
+                                if (isset($_REQUEST['section'])) {
+                                    echo $load->printSection($_REQUEST['section']);
+                                } else {
+                                    echo $load->printSection('Images');
+                                }
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center" id="form-sign" style="min-height: 100vh;display:none;">
+            
+                    <form action="./lib/controller.php" method="POST" enctype="multipart/form-data" class="col-md-3 form-shadow round-10 align-self-center p-3 pt-5 pl-5 mb-5 mt-0 " id="myform">
+                        <div class="form-group form-inline ">
+                            
+                            <input id="file" name="file" type="file" class="file" data-show-preview="false">
+                            <small class="form-text text-muted">Tipos de archivos soportados: 'image/jpeg','audio/ogg','video/mpeg' </small>
+                        </div>
+                       
+                        <div class="form-group text-center">
+                            <style>
+                                #signup {
+                                    color: green;
+                                }
+
+                                #signup:hover {
+                                    color: white;
+                                }
+                            </style>
+                            <button type="submit" class="btn btn-success mt-2 w-100 mr-5">
+
+                                <i class="fa fa-plus"></i>
+
+                                Subir
+                            </button>
+                            <button type="button" class="btn btn-outline-danger mt-2 w-100 mr-5">
+
+                                Cancelar
+                            </button>
+                        </div>
+
+                       
+                    </form>
+
+                </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
